@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="OrchardCore.Alias" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.Autoroute" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.Module.Targets" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.ContentManagement" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.DisplayManagement" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.Html" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.Menu" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.Seo" Version="1.8.2" />
+        <PackageReference Include="OrchardCore.Title" Version="1.8.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Mochi.Core\Mochi.Core.csproj" />
+    </ItemGroup>
+
+</Project>

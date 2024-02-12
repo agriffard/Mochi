@@ -1,0 +1,12 @@
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.Extensions.Logging;
+global using Mochi.Core.Entities;
+global using OrchardCore;
+global using OrchardCore.Alias.Models;
+global using OrchardCore.Autoroute.Models;
+global using OrchardCore.ContentManagement;
+global using OrchardCore.ContentManagement.Records;
+global using OrchardCore.Html.Models;
+global using OrchardCore.Menu.Models;
+global using YesSql;

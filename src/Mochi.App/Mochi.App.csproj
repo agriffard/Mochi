@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Mochi.Business\Mochi.Business.csproj" />
+        <ProjectReference Include="..\Mochi.Core\Mochi.Core.csproj" />
+        <ProjectReference Include="..\Mochi.Data.Http\Mochi.Data.Http.csproj" />
+        <ProjectReference Include="..\Mochi.Data\Mochi.Data.csproj" />
+        <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+    </ItemGroup>
+
+</Project>

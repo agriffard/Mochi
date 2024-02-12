@@ -1,0 +1,11 @@
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using Mochi.Core.Constants;
+global using Mochi.Core.Enums;
+global using Mochi.Core.Entities;
+global using Mochi.Core.Interfaces.Data;
+global using Mochi.Core.Models.Reporting;
+global using Mochi.Data.Context;
+global using Mochi.Data.Repositories;
