@@ -2,5 +2,6 @@ namespace Mochi.Core.Interfaces.Business;
 
 public partial interface IContentService
 {
-    string GetById(string id);
+    string GetBySlug(string slug);
+    Task<PageContent> GetPageBySlugAsync(string slug);
 }

@@ -84,7 +84,7 @@ public class ContentController : Controller
             return NotFound();
         }
 
-        var result = GetPageFromContentItem(contentItem);
+        var result = ConvertContentItemToPage(contentItem);
 
         return new ObjectResult(result);
     }
@@ -101,7 +101,7 @@ public class ContentController : Controller
 
         foreach (var contentItem in contentItems)
         {
-            result.Add(GetPageFromContentItem(contentItem));
+            result.Add(ConvertContentItemToPage(contentItem));
         }
 
         return new ObjectResult(result);
@@ -143,18 +143,19 @@ public class ContentController : Controller
         return result;
     }
 
-    private static PageContent GetPageFromContentItem(ContentItem contentItem)
+    private static PageContent ConvertContentItemToPage(ContentItem contentItem)
     {
         var result = new PageContent();
         result.Id = contentItem.ContentItemId;
         result.Title = contentItem.DisplayText; //contentItem.As<TitlePart>().Title;
-        result.Permalink = contentItem.As<AutoroutePart>().Path;
+        result.Permalink = contentItem.As<AutoroutePart>().Path; // Use Alias?
         result.Html = contentItem.As<HtmlBodyPart>().Html;
         result.CreatedUtc = contentItem.CreatedUtc;
 
-        if (contentItem.As<SeoMetaPart>() != null)
+        var seo = contentItem.As<SeoMetaPart>();
+        if (seo != null)
         {
-            result.MetaDescription = contentItem.As<SeoMetaPart>().MetaDescription;
+            result.MetaDescription = seo.MetaDescription;
         }
 
         return result;

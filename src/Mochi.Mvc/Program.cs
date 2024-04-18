@@ -1,34 +1,32 @@
 var builder = WebApplication.CreateBuilder(args);
 var logger = builder.AddSerilog();
 
+builder.Services.AddControllersWithViews();
+
 builder.Services.AddBusinessServices();
 builder.Services.AddDataRepositories();
 builder.Services.AddDataHttpRepositories();
 builder.Services.AddDbContext(builder.Configuration);
 builder.Services.ConfigureAppSettingsSection(builder.Configuration);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-
 logger.LogInformation("Building application.");
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
-app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 
 logger.LogInformation("Running application.");
 app.Run();

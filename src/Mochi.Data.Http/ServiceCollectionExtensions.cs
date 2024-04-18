@@ -1,3 +1,5 @@
+using System.Net.Http;
+
 namespace Mochi.Data.Http;
 
 /// <summary>
@@ -7,6 +9,16 @@ public static class ServiceCollectionExtensions
 {
     public static void AddDataHttpRepositories(this IServiceCollection services)
     {
+        services.AddHttpClient("OCClient", ctx => { ctx.BaseAddress = new Uri("https://localhost:7010/"); });
+
+        services.AddTransient<IContentRepository>(ctx =>
+        {
+            var clientFactory = ctx.GetRequiredService<IHttpClientFactory>();
+            var httpClient = clientFactory.CreateClient("GitHubClient");
+
+            return new ContentRepository(httpClient);
+        });
+
         services.AddTransient<IContentRepository, ContentRepository>();
     }
 }

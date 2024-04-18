@@ -1,0 +1,18 @@
+@page "/"
+<PageTitle>Home</PageTitle>
+
+@if (Content != null)
+{
+    <h1>@Content.Title</h1>
+    @((MarkupString)Content.Html)
+}
+
+@code {
+    [Inject] public IContentService ContentService { get; set; }
+    protected PageContent Content { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Content = await ContentService.GetPageBySlugAsync("home");
+    }
+}

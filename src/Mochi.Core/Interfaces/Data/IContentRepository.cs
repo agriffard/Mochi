@@ -2,5 +2,6 @@ namespace Mochi.Core.Interfaces.Data;
 
 public partial interface IContentRepository
 {
-    string GetById(string id);
+    string GetBySlug(string slug);
+    Task<PageContent> GetPageBySlugAsync(string slug);
 }

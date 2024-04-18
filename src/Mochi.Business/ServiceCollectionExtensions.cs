@@ -7,6 +7,7 @@ public static class ServiceCollectionExtensions
 {
     public static void AddBusinessServices(this IServiceCollection services)
     {
+        services.AddTransient<IContentService, ContentService>();
         services.AddTransient<IReportingService, ReportingService>();
     }
 }

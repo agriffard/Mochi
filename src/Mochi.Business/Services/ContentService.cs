@@ -9,8 +9,13 @@ public partial class ContentService : IContentService
         _repository = sampleRepository;
     }
 
-    public string GetById(string id)
+    public string GetBySlug(string slug)
     {
-        return _repository.GetById(id);
+        return _repository.GetBySlug(slug);
+    }
+
+    public async Task<PageContent> GetPageBySlugAsync(string slug)
+    {
+        return await _repository.GetPageBySlugAsync(slug);
     }
 }
