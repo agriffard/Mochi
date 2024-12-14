@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
@@ -12,16 +12,16 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="OrchardCore.Alias" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.Autoroute" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.Module.Targets" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.ContentManagement" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.DisplayManagement" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.Html" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.Menu" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.Seo" Version="2.1.2" />
-        <PackageReference Include="OrchardCore.Title" Version="2.1.2" />
+        <PackageReference Include="OrchardCore.Alias" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.Autoroute" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.Module.Targets" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.ContentManagement" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.DisplayManagement" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.Html" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.Menu" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.Seo" Version="2.1.3" />
+        <PackageReference Include="OrchardCore.Title" Version="2.1.3" />
     </ItemGroup>
 
     <ItemGroup>
