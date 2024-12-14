@@ -1,0 +1,33 @@
+@page "/p/{alias}"
+@attribute [StreamRendering]
+
+@if (PageContent is null)
+{
+    <p><em>Loading...</em></p>
+    return;
+}
+
+<PageTitle>@(PageContent.Title)</PageTitle>
+
+<h1>@PageContent.Title</h1>
+@((MarkupString)@PageContent.Html)
+
+@code
+{
+    [Inject] protected IContentService ContentService { get; init; }
+    [ParameterAttribute]
+    public string Alias { get; set; }
+
+    protected PageContent PageContent { get; set; }
+    // protected string Markup { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        PageContent = await ContentService.GetPageBySlugAsync(Alias);
+    }
+}

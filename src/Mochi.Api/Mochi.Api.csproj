@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Mochi.ServiceDefaults\Mochi.ServiceDefaults.csproj" />
     <ProjectReference Include="..\Mochi\Mochi.csproj" />
   </ItemGroup>
 

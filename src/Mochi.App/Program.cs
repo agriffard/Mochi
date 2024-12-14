@@ -7,6 +7,9 @@ builder.Services.AddDataHttpRepositories();
 builder.Services.AddDbContext(builder.Configuration);
 builder.Services.ConfigureAppSettingsSection(builder.Configuration);
 
+// Add service defaults & Aspire client integrations.
+builder.AddServiceDefaults();
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();

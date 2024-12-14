@@ -11,6 +11,7 @@
         <ProjectReference Include="..\Mochi.Core\Mochi.Core.csproj" />
         <ProjectReference Include="..\Mochi.Data.Http\Mochi.Data.Http.csproj" />
         <ProjectReference Include="..\Mochi.Data\Mochi.Data.csproj" />
+        <ProjectReference Include="..\Mochi.ServiceDefaults\Mochi.ServiceDefaults.csproj" />
         <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
     </ItemGroup>
 
