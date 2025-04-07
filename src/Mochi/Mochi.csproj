@@ -12,16 +12,16 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="OrchardCore.Alias" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.Autoroute" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.Module.Targets" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.ContentManagement" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.DisplayManagement" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.Html" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.Menu" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.Seo" Version="3.0.0-preview-18534" />
-        <PackageReference Include="OrchardCore.Title" Version="3.0.0-preview-18534" />
+        <PackageReference Include="OrchardCore.Alias" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.Autoroute" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.Module.Targets" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.ContentManagement" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.DisplayManagement" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.Html" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.Menu" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.Seo" Version="3.0.0-preview-18567" />
+        <PackageReference Include="OrchardCore.Title" Version="3.0.0-preview-18567" />
     </ItemGroup>
 
     <ItemGroup>

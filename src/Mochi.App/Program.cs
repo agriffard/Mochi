@@ -14,6 +14,13 @@ builder.AddServiceDefaults();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+var apiBaseAddress = builder.Configuration["services:api:https:0"];
+
+builder.Services.AddScoped(sp => new HttpClient
+{
+    BaseAddress = new Uri(apiBaseAddress)
+});
+
 logger.LogInformation("Building application.");
 var app = builder.Build();
 
@@ -24,6 +31,11 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+// Refit client registration
+//builder.Services
+//    .AddRefitClient<IBlogApi>()
+//    .ConfigureHttpClient(c => c.BaseAddress = new Uri(apiBaseAddress));
 
 app.UseHttpsRedirection();
 

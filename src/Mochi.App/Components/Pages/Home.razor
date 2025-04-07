@@ -1,10 +1,18 @@
 @page "/"
 <PageTitle>Home</PageTitle>
-
+@inject IConfiguration Configuration
 @if (Content != null)
 {
     <h1>@Content.Title</h1>
     @((MarkupString)Content.Html)
+
+    @* @Configuration["services:api:https:0"] *@
+    @* <ul>
+        @foreach (var kvp in Configuration.AsEnumerable())
+        {
+            <li>@kvp.Key = @kvp.Value</li>
+        }
+    </ul> *@
 }
 
 @code {

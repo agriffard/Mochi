@@ -20,7 +20,7 @@ public partial class ContentRepository : IContentRepository
     public async Task<PageContent> GetPageBySlugAsync(string slug)
     {
         // Todo : Handle exception
-        var result = await _client.GetFromJsonAsync<PageContent>($"https://localhost:7010/Api/Content/Pages/{slug}");
+        var result = await _client.GetFromJsonAsync<PageContent>($"Api/Content/Pages/{slug}");
 
         return result; // Call api to get content by id
     }
