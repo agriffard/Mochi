@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Application.Cms.Core.Targets" Version="3.0.0-preview-18567" />
+    <PackageReference Include="OrchardCore.Application.Cms.Core.Targets" Version="3.0.0-preview-18576" />
   </ItemGroup>
 
   <ItemGroup>
