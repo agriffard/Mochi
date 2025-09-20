@@ -5,16 +5,16 @@ namespace Mochi.Controllers;
 [ApiController]
 [Produces("application/json")]
 //[Authorize(AuthenticationSchemes = "Api"), IgnoreAntiforgeryToken]
-[Route("api/[controller]")]
-public class ContentController : Controller
+[Route("api/v1/contents")]
+public class ContentsController : Controller
 {
     private readonly IAuthorizationService _authorizationService;
     private readonly IContentManager _contentManager;
     private readonly IOrchardHelper _orchardHelper;
     private readonly ISession _session;
-    private readonly ILogger<ContentController> _logger;
+    private readonly ILogger<ContentsController> _logger;
 
-    public ContentController(IAuthorizationService authorizationService, IContentManager contentManager, IOrchardHelper orchardHelper, ISession session, ILogger<ContentController> logger)
+    public ContentsController(IAuthorizationService authorizationService, IContentManager contentManager, IOrchardHelper orchardHelper, ISession session, ILogger<ContentsController> logger)
     {
         _authorizationService = authorizationService;
         _contentManager = contentManager;

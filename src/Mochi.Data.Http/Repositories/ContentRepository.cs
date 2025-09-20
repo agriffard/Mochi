@@ -1,27 +1,21 @@
 using System.Net.Http.Json;
+using Mochi.Data.Http.ApiClients;
 
 namespace Mochi.Data.Repositories;
 
 public partial class ContentRepository : IContentRepository
 {
-    public HttpClient _client { get; }
+    private readonly IContentApiClient _contentApiClient;
 
-    public ContentRepository(HttpClient client)//ILogger<ContentRepository> logger)
+    public ContentRepository(IContentApiClient contentApiClient)
     {
-        _client = client;
-    }
-
-    public string GetBySlug(string slug)
-    {
-        // HttpClient calling https://localhost:7010/Api/Content/Pages/{slug}
-        return "";
+        _contentApiClient = contentApiClient;
     }
 
     public async Task<PageContent> GetPageBySlugAsync(string slug)
     {
-        // Todo : Handle exception
-        var result = await _client.GetFromJsonAsync<PageContent>($"Api/Content/Pages/{slug}");
-
-        return result; // Call api to get content by id
+        // Using Refit client to get content by slug
+        var result = await _contentApiClient.GetPageBySlugAsync(slug);
+        return result;
     }
 }

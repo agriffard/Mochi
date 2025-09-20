@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 
 /src/Mochi.Api/App_Data/*
+/src/Mochi.Api/wwwroot/Default/is-cache/*
