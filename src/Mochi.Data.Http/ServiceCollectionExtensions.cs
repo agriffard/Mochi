@@ -21,7 +21,7 @@ public static class ServiceCollectionExtensions
         services.AddTransient<IContentRepository>(ctx =>
         {
             var clientFactory = ctx.GetRequiredService<IHttpClientFactory>();
-            var httpClient = clientFactory.CreateClient("GitHubClient");
+            var httpClient = clientFactory.CreateClient("ApiClient");
 
             return new ContentRepository(httpClient);
         });
